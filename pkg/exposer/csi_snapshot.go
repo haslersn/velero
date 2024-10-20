@@ -368,7 +368,7 @@ func (e *csiSnapshotExposer) createBackupPVC(ctx context.Context, ownerObject co
 		},
 		Spec: corev1.PersistentVolumeClaimSpec{
 			AccessModes: []corev1.PersistentVolumeAccessMode{
-				corev1.ReadWriteOnce,
+				corev1.ReadOnlyMany,
 			},
 			StorageClassName: &storageClass,
 			VolumeMode:       &volumeMode,
